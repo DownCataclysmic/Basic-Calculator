@@ -5,19 +5,50 @@
         <style>
             body {
                 padding: 10px;
-                background-image: url('calculator-background.webp');
+                background-image: url('calculator-background.jpg');
                 background-size: cover;
 
             }
 
-            h6 {
+            h1 {
+                letter-spacing: 5px;
+                font-size: 30px;
+                font-weight: 900;
+                color: black;
+                /*text-shadow:0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px,0 0 2px;*/
+            }
 
+            h4 {
+                color: black;
             }
 
             .btn-primary, .btn, .btn-default {
-                background-color: #8064A2 !important;
-                
+                background-color: rgba(0,0,0,0.15) !important;
+                background-image: url(square-button.png) !important;
+                background-size: stretch;
+                padding: 0 !important;
+                border: none !important;       
+ 
             }
+
+            .my-button:active {
+                opacity: 0.8 !important;
+            }
+
+            .my-button:hover {
+                opacity: 0.95;
+            }
+
+            .my-button:focus {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+
+            input, textarea{
+                color: #FFF;
+                background:rgba(204, 204, 204, 0.5);;
+            }
+
         </style>
         <head>
 
@@ -29,45 +60,46 @@
     </head>
 
     <body class = "text-center mx-auto" style="width: 600px;">
-
+        <h2 style="color: white;" >Simple Calculator</h2>
+        <p style="color: white;">By Danny Maksoud</p>
         <script src="calculator-script.js"></script>
 
-        <input class = "p-4 my-auto" id="calc-result" type = "text" style="color: black;"></input>
+        <input class = "p-4 text-center" id="calc-result" type = "text" style="color: rgb(255, 255, 255);font-size: 30px;font-weight: 900;text-shadow: 3px 3px 2px #1c1a1a;"></input>
 
-        <div id = "button-colour" >
-            <div class="p-4" style = "text-shadow: 3px 3px #ffffff;">
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('+')">+</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('*')">x</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('/')">/</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('-')">-</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="solveValue()">=</button>
-            </div>
-
-            <div class = "p-1">
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('1')">1</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('2')">2</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('3')">3</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="deleteValue()">Delete</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="clearValue()">Reset</button>
+        <div id = "calc-background-colour">
+            <div class="p-2" style = "text-shadow: 3px 3px #ffffff;">
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('+')"><h1>+</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('*')"><h1>x</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('/')"><h1>÷</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('-')"><h1>-</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="solveValue()"><h1>=</h1></button>
             </div>
 
             <div class = "p-2">
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('4')">4</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('5')">5</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('6')">6</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('.')">.</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('%')">%</button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('1')"><h1>1</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('2')"><h1>2</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('3')"><h1>3</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="deleteValue()"><h4>Delete</h4></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="clearValue()"><h4>Clear</h4></button>
             </div>
 
             <div class = "p-2">
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('7')">7</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('8')">8</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('9')">9</button>
-                <button id = "button-colour" class="btn btn-primary" style="width:100px;height: 60px" onclick="historyValues()">History</button>
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="changeCalculatorColor()">Theme</button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('4')"><h1>4</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('5')"><h1>5</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('6')"><h1>6</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('.')"><h1>.</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('%')"><h1>%</h1></button>
             </div>
-            <div class = "p-2 text-center">
-                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 60px" onclick="showValue('0')">0</button>
+
+            <div class = "p-2">
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('7')"><h1>7</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('8')"><h1>8</h1></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="showValue('9')"><h1>9</h1></button>
+                <button id = "button-colour" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="historyValues()"><h4>History</h4></button>
+                <button id = "calc-result" class="btn btn-primary my-button" style="width:100px;height: 80px" onclick="changeCalculatorColor()"><h4>Theme</h4></button>
+            </div>
+            <div class = "p-2">
+                <button id = "calc-result" class="btn btn-primary" style="width:100px;height: 80px" onclick="showValue('0')"><h1>0</h1></button>
             </div>
         </div>
 

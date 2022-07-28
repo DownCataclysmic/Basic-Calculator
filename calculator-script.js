@@ -37,7 +37,7 @@ let colors = ["red", "blue", "green", "purple", "white", ""];
 let colorIndex = 0;
 
 function changeCalculatorColor() {
-    let col = document.getElementById("button-colour");
+    let col = document.getElementById("calc-background-colour");
     if( colorIndex >= colors.length ) {
         colorIndex = 0;
         }
